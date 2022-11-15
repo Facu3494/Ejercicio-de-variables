@@ -1,24 +1,23 @@
 <html>
-  <body>
-    <script type="text/javascript">
-var frecuencia = Number (prompt ("ingrese la frecuencia"));
-var inductancia = Number (prompt ("ingrese la inductancia"));
-var capacitancia = Number (prompt ("ingrese la capacitancia"));
-var pi = 6.28
-var xl = pi*frecuencia*inductancia
-var multiplicacion = pi*frecuencia*capacitancia
-var xc = 1/multiplicacion
-var promedio = suma/3
-if( xl > xc ){
-  document.write("<b>El circuito es Inductivo</b>");
-}else if (xc > xl){
-  document.write("<b>El circuito es Capacitivo</b>");
+<body>
+<script type="text/javascript">
+var frecuencia=Number(prompt("Ingrese la inductancia")); 
+var inductancia=Number(prompt("Ingrese la capacitancia")); 
+var capacitancia=Number(prompt("Ingrese la frecuencia")); 
+var XL= (6.28*frecuencia*inductancia); 
+var XC= 1/(6.28*frecuencia*capacitancia); 
+if( XL>XC ){
+ document.write( "<b> el circuito es inductivo</b><br/>"); 
 }
-else if (xc = xl){
-  document.write("<b>El Circuio esta en Resonancia</b>");
+if (XL<XC){
+ document.write ("<br/> <b> el circuito es capacitivo</b>"); 
 }
-    </script>
-    <a href="../index.html" class="nav-link">Volver</a>
-    <input type="button" onclick="cuentas()" value="Promedio"/>
-  </body>
+if (XL == XC){
+document.write ("<br/> <b> el circuito es resonante</b>"); 
+}   
+ 
+  document.write("<br/><br/><p><a href=\"../index.html\">volver</a></p>");
+</script>
+ <p> Ingresar otra valores</p> 
+</body>
 </html>
